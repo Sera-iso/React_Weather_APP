@@ -17,7 +17,7 @@ axios.get(url).then(testAxios);
 
 return (
     <div className="Search">
-    <p>First step is implementing the search</p>
+    
     {message}
     <br />
     <br />
