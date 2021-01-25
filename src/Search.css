@@ -1,0 +1,14 @@
+.Search form {
+    text-align: center;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.Search ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
