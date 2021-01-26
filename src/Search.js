@@ -5,28 +5,24 @@ import "./Search.css";
 export default function Search() {
   const [city, setCity] = useState(null);
   const [weather, setWeather] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
   function fetchWeatherData(response) {
-    let city = response.data.name;
-    let temp = response.data.main.temp;
-    let icon = response.data.weather[0].icon;
-    let iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
-    let description = response.data.weather.description;
-    let condition = response.data.weather[0].main;
-    let humidity = response.data.main.humidity;
-    let wind = response.data.wind.speed;
-    let results = (<div className="weather-data"><h1>{city}</h1>
-      <h2>{Math.round(temp)}°C</h2>
-      <ul>
-        <li><img src={iconUrl} alt={description} />{condition}</li>
-        <li>Humidity: {humidity}% | Wind: {Math.round(wind)}km/h</li>
-      </ul>
-    </div>);
-    setWeather(results);
+    setWeather({
+      city: response.data.name,
+      temp: response.data.main.temp,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
+      description: response.data.weather.description,
+      condition: response.data.weather[0].main,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed
+    });
+    setLoaded(true);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+    setLoaded(false);
     let apiKey = "c3fdeae7b368bbda2e09bebfb67775c6";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     axios.get(url).then(fetchWeatherData);
@@ -45,8 +41,13 @@ export default function Search() {
           <input type="submit" className="btn btn-primary" value="Search" />
         </div>
       </form>
-      <br />
-      {weather}
+      {loaded === true ? (<div className="weather-data"><h1>{weather.city}</h1>
+        <h2>{Math.round(weather.temp)}°C</h2>
+        <ul>
+          <li><img src={weather.iconUrl} alt={weather.description} />{weather.condition}</li>
+          <li>Humidity: {weather.humidity}% | Wind: {Math.round(weather.wind)}km/h</li>
+        </ul>
+      </div>) : null}
     </div>
   )
 }
