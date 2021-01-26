@@ -42,10 +42,10 @@ export default function Search() {
         </div>
       </form>
       {loaded === true ? (<div className="weather-data"><h1>{weather.city}</h1>
-        <h2>{Math.round(weather.temp)}°C</h2>
+        <span className="units"><h2>{Math.round(weather.temp)}°</h2><sup>C | F</sup></span>
         <ul>
-          <li><img src={weather.iconUrl} alt={weather.description} />{weather.condition}</li>
-          <li>Humidity: {weather.humidity}% | Wind: {Math.round(weather.wind)}km/h</li>
+          <li className="weather-conditions"><img src={weather.iconUrl} alt={weather.description} />{weather.condition}</li>
+          <li className="other-measurements">Humidity: {weather.humidity}% | Wind: {Math.round(weather.wind)}km/h</li>
         </ul>
       </div>) : null}
     </div>
