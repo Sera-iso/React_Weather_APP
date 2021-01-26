@@ -1,9 +1,13 @@
-.Search form {
-    text-align: center;
-    display: block;
+.Search {
+    border: 1px solid lightgray;
+    border-radius: 6px;
     max-width: 600px;
+    display: block;
     margin: 0 auto;
     width: 90%;
+}
+.Search form {
+    margin: 20px;
 }
 
 .Search ul {

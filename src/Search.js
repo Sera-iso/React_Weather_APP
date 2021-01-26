@@ -9,13 +9,13 @@ export default function Search() {
   function fetchWeatherData(response) {
     let city = response.data.name;
     let temp = response.data.main.temp;
-    let icon = response.data.weather.icon;
+    let icon = response.data.weather[0].icon;
     let iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
     let description = response.data.weather.description;
-    let condition = response.data.weather.main;
+    let condition = response.data.weather[0].main;
     let results = (<ul>
-      <li>{city}</li>
-      <li>{Math.round(temp)}°<sup>C | F</sup></li>
+      <li><h1>{city}</h1></li>
+      <li><h2>{Math.round(temp)}°C</h2></li>
       <li><img src={iconUrl} alt={description} />{condition}</li>
     </ul>);
     setWeather(results);
@@ -41,6 +41,7 @@ export default function Search() {
           <input type="submit" className="btn btn-primary" value="Search" />
         </div>
       </form>
+      <br />
       {weather}
     </div>
   )
