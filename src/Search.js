@@ -10,14 +10,18 @@ export default function Search() {
     let city = response.data.name;
     let temp = response.data.main.temp;
     let icon = response.data.weather[0].icon;
-    let iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    let iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
     let description = response.data.weather.description;
     let condition = response.data.weather[0].main;
-    let results = (<ul>
-      <li><h1>{city}</h1></li>
-      <li><h2>{Math.round(temp)}°C</h2></li>
-      <li><img src={iconUrl} alt={description} />{condition}</li>
-    </ul>);
+    let humidity = response.data.main.humidity;
+    let wind = response.data.wind.speed;
+    let results = (<div className="weather-data"><h1>{city}</h1>
+      <h2>{Math.round(temp)}°C</h2>
+      <ul>
+        <li><img src={iconUrl} alt={description} />{condition}</li>
+        <li>Humidity: {humidity}% | Wind: {Math.round(wind)}km/h</li>
+      </ul>
+    </div>);
     setWeather(results);
   }
 
