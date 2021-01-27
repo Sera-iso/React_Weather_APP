@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "./Search.css";
 
+
 export default function Search() {
   const [city, setCity] = useState(null);
   const [weather, setWeather] = useState(null);
@@ -87,13 +88,13 @@ export default function Search() {
           <div className="row">
             <div className="col">
               <ul>
-                <li>
+                <li className="small">
                   {forecast.time}
                 </li>
                 <li>
                   <img src={forecast.iconUrlForecast} alt="forecast icon" />
                 </li>
-                <li>
+                <li className="small">
                   {Math.round(forecast.maxTemp)}° | {Math.round(forecast.minTemp)}°
                   </li>
               </ul>
