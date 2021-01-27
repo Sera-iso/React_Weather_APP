@@ -32,5 +32,8 @@
 }
 .Search .units {
     display: inline-block;
+    position: relative;
+    top:-13px;
+    padding-left:4px;
 }
 
