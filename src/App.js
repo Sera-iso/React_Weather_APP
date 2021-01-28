@@ -2,13 +2,11 @@ import './App.css';
 import Search from './Search';
 import Footer from "./Footer";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-        <Search />
-        <Footer />
+      <Search />
+      <Footer />
     </div>
   );
 }
-
-export default App;
