@@ -84,7 +84,6 @@ export default function Search() {
           <hr />
         </div>) : null}
       {forecastLoaded === true ? (
-        <div className="container">
           <div className="row">
             <div className="col">
               <ul>
@@ -99,8 +98,7 @@ export default function Search() {
                   </li>
               </ul>
             </div>
-          </div>
-        </div>) : null}
+          </div>) : null}
     </div>
   )
 }
