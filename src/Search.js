@@ -75,8 +75,10 @@ export default function Search() {
       {loaded === true ? (
         <div className="weather-data">
           <h1>{weather.city}</h1>
-          <h2>{Math.round(weather.temp)}°</h2>
-          <sup className="units">C | F</sup>
+          <span className="temperature">
+            <h2>{Math.round(weather.temp)}°</h2>
+            <sup className="units">C | F</sup>
+          </span>
           <ul>
             <li className="weather-conditions"><img src={weather.iconUrl} alt={weather.description} />{weather.condition}</li>
             <li className="other-measurements">Humidity: {weather.humidity}% | Wind: {Math.round(weather.wind)}km/h</li>
