@@ -5,10 +5,8 @@ import "./Search.css";
 
 export default function Search() {
   const [city, setCity] = useState(null);
-  const [weather, setWeather] = useState(null);
-  const [loaded, setLoaded] = useState(false);
-  const [forecast, setForecast] = useState(null);
-  const [forecastLoaded, setForecastLoaded] = useState(null);
+  const [weather, setWeather] = useState({ loaded: false });
+  const [forecast, setForecast] = useState({ forecastLoaded: false });
 
   function fetchWeatherData(response) {
     setWeather({
@@ -18,9 +16,9 @@ export default function Search() {
       description: response.data.weather.description,
       condition: response.data.weather[0].main,
       humidity: response.data.main.humidity,
-      wind: response.data.wind.speed
+      wind: response.data.wind.speed,
+      loaded: true
     });
-    setLoaded(true);
   }
 
   function formatDate(timestamp) {
@@ -41,15 +39,13 @@ export default function Search() {
       time: formatDate(response.data.list[0].dt * 1000),
       iconUrlForecast: `https://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}.png`,
       maxTemp: response.data.list[0].main.temp_max,
-      minTemp: response.data.list[0].main.temp_min
+      minTemp: response.data.list[0].main.temp_min,
+      forecastLoaded: true
     });
-    setForecastLoaded(true);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setLoaded(false);
-    setForecastLoaded(false);
 
     let apiKey = "c3fdeae7b368bbda2e09bebfb67775c6";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
@@ -72,7 +68,7 @@ export default function Search() {
           <input type="submit" className="btn btn-primary" value="Search" />
         </div>
       </form>
-      {loaded === true ? (
+      {weather.loaded === true ? (
         <div className="weather-data">
           <h1>{weather.city}</h1>
           <span className="temperature">
@@ -85,7 +81,7 @@ export default function Search() {
           </ul>
           <hr />
         </div>) : null}
-      {forecastLoaded === true ? (
+      {forecast.forecastLoaded === true ? (
         <div className="row">
           <div className="col">
             <ul>
