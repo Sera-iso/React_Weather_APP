@@ -68,7 +68,7 @@ export default function Search() {
     <div className="Search">
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <input type="search" className="form-control" placeholder="Enter a city..." onChange={fetchCity} />
+          <input type="search" className="form-control" placeholder="Enter a city..." autoFocus="on" onChange={fetchCity} />
           <input type="submit" className="btn btn-primary" value="Search" />
         </div>
       </form>
@@ -84,21 +84,21 @@ export default function Search() {
           <hr />
         </div>) : null}
       {forecastLoaded === true ? (
-          <div className="row">
-            <div className="col">
-              <ul>
-                <li className="small">
-                  {forecast.time}
-                </li>
-                <li>
-                  <img src={forecast.iconUrlForecast} alt="forecast icon" />
-                </li>
-                <li className="small">
-                  {Math.round(forecast.maxTemp)}° | {Math.round(forecast.minTemp)}°
+        <div className="row">
+          <div className="col">
+            <ul>
+              <li className="small">
+                {forecast.time}
+              </li>
+              <li>
+                <img src={forecast.iconUrlForecast} alt="forecast icon" />
+              </li>
+              <li className="small">
+                {Math.round(forecast.maxTemp)}° | {Math.round(forecast.minTemp)}°
                   </li>
-              </ul>
-            </div>
-          </div>) : null}
+            </ul>
+          </div>
+        </div>) : null}
     </div>
   )
 }

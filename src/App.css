@@ -1,11 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-header {
-  margin-top: 40px;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 600px;
+  margin: 0 auto;
+  width: 90%;
 }
 
