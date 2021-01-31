@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import FormattedDate from "./FormattedDate";
 import "./Search.css";
 
 
@@ -10,6 +11,7 @@ export default function Search() {
 
   function fetchWeatherData(response) {
     setWeather({
+      loaded: true,
       city: response.data.name,
       temp: response.data.main.temp,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
@@ -17,26 +19,12 @@ export default function Search() {
       condition: response.data.weather[0].main,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      loaded: true
+      date: new Date(response.data.dt * 1000)
     });
-  }
-
-  function formatDate(timestamp) {
-    let time = new Date(timestamp);
-    let hour = time.getHours();
-    if (hour < 10) {
-      hour = `0${hour}`;
-    }
-    let minutes = time.getMinutes();
-    if (minutes < 10) {
-      minutes = `0${minutes}`;
-    }
-    return `${hour}:${minutes}`
   }
 
   function fetchForecastData(response) {
     setForecast({
-      time: formatDate(response.data.list[0].dt * 1000),
       iconUrlForecast: `https://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}.png`,
       maxTemp: response.data.list[0].main.temp_max,
       minTemp: response.data.list[0].main.temp_min,
@@ -79,6 +67,7 @@ export default function Search() {
             <li className="weather-conditions"><img src={weather.iconUrl} alt={weather.description} />{weather.condition}</li>
             <li className="other-measurements">Humidity: {weather.humidity}% | Wind: {Math.round(weather.wind)}km/h</li>
           </ul>
+          <FormattedDate date={weather.date} />
           <hr />
         </div>) : null}
       {forecast.forecastLoaded === true ? (
@@ -86,7 +75,7 @@ export default function Search() {
           <div className="col">
             <ul>
               <li className="small">
-                {forecast.time}
+                14:00
               </li>
               <li>
                 <img src={forecast.iconUrlForecast} alt="forecast icon" />
