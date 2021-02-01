@@ -7,41 +7,4 @@
     margin: 20px;
 }
 
-.Search ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.Search .weather-conditions {
-    font-size: 18px;
-}
-.Search .other-measurements {
-    font-size: 14px;
-    padding-top: 10px;
-}
-.Search h1 {
-    font-weight: bolder;
-    font-style: italic;
-    font-family: monospace;
-    font-size: 40px;
-}
-.Search h2 {
-    display: inline;
-    font-family: monospace;
-    font-weight: bolder;
-    font-size: 38px;
-}
-.Search .units {
-    display: inline-block;
-    position: relative;
-    top:-13px;
-    padding-left:4px;
-}
-.Search .small {
-    font-size: 14px;
-}
-.Search .temperature {
-    position: relative;
-    left: 16px;
-}
 

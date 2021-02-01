@@ -13,7 +13,7 @@ export default function Search( {defaultCity} ) {
       search: true,
       city: response.data.name,
       temp: response.data.main.temp,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather.description,
       condition: response.data.weather[0].main,
       humidity: response.data.main.humidity,
