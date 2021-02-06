@@ -14,6 +14,10 @@ export default function WeatherTemperature( {celsius} ) {
     setTemperature("celsius");
     }
 
+    function fahrenheit() {
+        return Math.round((celsius * 9/5) + 32);
+    }
+
     if (temperature === "celsius") {
         return (
             <div className="WeatherTemperature">
@@ -22,10 +26,9 @@ export default function WeatherTemperature( {celsius} ) {
             </div>
         )
     } else {
-        let fahrenheit = (celsius * 9/5) + 32;
         return (
             <div className="WeatherTemperature">
-                <h2>{Math.round(fahrenheit)}</h2>
+                <h2>{fahrenheit()}</h2>
                 <p className="units"><a href="/" onClick={convertToC}>°C</a> | °F</p>
             </div>
         )

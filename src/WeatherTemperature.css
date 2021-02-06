@@ -19,4 +19,5 @@
 .WeatherTemperature {
   position: relative;
   left: 2px;
+  height: 46px;
 }

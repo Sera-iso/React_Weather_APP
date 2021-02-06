@@ -1,0 +1,7 @@
+.WeatherForecastElement ul {
+  list-style-type: none;
+  padding: 0;
+}
+.WeatherForecastElement li {
+  font-size: 14px;
+}

@@ -8,6 +8,11 @@
   list-style-type: none;
   padding: 0;
 }
+.WeatherOverview .weather-conditions canvas {
+  margin-right: 8px;
+  position: relative;
+  top: 10px;
+}
 .WeatherOverview .weather-conditions {
   font-size: 18px;
 }
@@ -15,8 +20,4 @@
   font-size: 14px;
   padding-top: 16px;
 }
-.WeatherOverview .weather-conditions canvas {
-  margin-right: 8px;
-  position: relative;
-  top: 10px;
-}
+
