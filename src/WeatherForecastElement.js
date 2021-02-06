@@ -1,4 +1,5 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecastElement.css";
 
 export default function WeatherForecastElement({data}) {
@@ -23,7 +24,7 @@ export default function WeatherForecastElement({data}) {
                 {formatHour(data.dt * 1000)}
                 </li>
                 <li>
-                <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`} alt={data.weather[0].main} />
+                <WeatherIcon iconCode={data.weather[0].icon} />
                 </li>
                 <li>
                 {Math.round(data.main.temp_max)}°| {Math.round(data.main.temp_min)}°
