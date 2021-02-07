@@ -1,7 +1,10 @@
-.Footer p {
-  padding-top: 20px;
-  font-size: 12px;
+.Footer {
+  font-size: 14px;
+  margin-top: 10px;
 }
 .Footer a {
   text-decoration: none;
+}
+.Footer p {
+  padding-top: 20px;
 }

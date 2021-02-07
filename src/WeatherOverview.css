@@ -12,12 +12,12 @@
   margin-bottom: 10px;
 }
 .WeatherOverview canvas {
-  margin-right: 8px;
+  margin-right: 4px;
   position: relative;
   top: 16px;
 }
 .WeatherOverview .weather-conditions {
-  font-size: 20px;
+  font-size: 18px;
 }
 .WeatherOverview .other-measurements {
   font-size: 16px;

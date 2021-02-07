@@ -18,16 +18,16 @@ export default function WeatherForecastElement({data}) {
     }
 
     return (
-        <div className="WeatherForecastElement col-2">
+        <div className="WeatherForecastElement col">
             <ul>
-                <li>
+                <li className="hour">
                 {formatHour(data.dt * 1000)}
                 </li>
                 <li>
                 <WeatherIcon iconCode={data.weather[0].icon} />
                 </li>
-                <li>
-                {Math.round(data.main.temp_max)}°| {Math.round(data.main.temp_min)}°
+                <li className="temp">
+                {Math.round(data.main.temp_max)}°C | {Math.round(data.main.temp_min)}°C
                 </li>
             </ul>
         </div>

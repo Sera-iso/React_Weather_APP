@@ -1,8 +1,39 @@
-.WeatherForecastElement ul {
-  list-style-type: none;
-  padding: 0;
+.WeatherForecastElement {
+  margin-top: 10px;
 }
 .WeatherForecastElement li {
   font-size: 14px;
   padding-bottom: 6px;
+}
+.WeatherForecastElement ul {
+  list-style-type: none;
+  padding: 0;
+}
+@media (max-width: 767.98px) {
+  .WeatherForecastElement {
+    flex: none;
+    border-bottom: 1px solid #f4f4f4;
+    margin-top: 0;
+  }
+  .WeatherForecastElement:last-of-type {
+    border-bottom-width: 0;
+  }
+  .WeatherForecastElement li {
+    display: inline;
+  }
+  .WeatherForecastElement ul {
+    margin: 4px 0;
+    position: relative;
+    bottom: -4px;
+  }
+  .WeatherForecastElement .hour {
+    float: left;
+    position: relative;
+    bottom: -6px;
+  }
+  .WeatherForecastElement .temp {
+    float: right;
+    position: relative;
+    bottom: -6px;
+  }
 }

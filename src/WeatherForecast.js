@@ -21,7 +21,6 @@ export default function WeatherForecast( {city} ) {
             <WeatherForecastElement data={forecast.list[2]}/>
             <WeatherForecastElement data={forecast.list[3]}/>
             <WeatherForecastElement data={forecast.list[4]}/>
-            <WeatherForecastElement data={forecast.list[5]}/>
         </div>
       ) 
     } else {
