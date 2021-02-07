@@ -8,9 +8,9 @@
 .WeatherTemperature .units {
   display: inline-block;
   position: relative;
-  top: -16px;
-  padding-left: 4px;
-  font-size: 14px;
+  top: -26px;
+  padding-left: 2px;
+  font-size: 12px;
 }
 .WeatherTemperature a {
   text-decoration: none;
