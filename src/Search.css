@@ -1,10 +1,12 @@
 .Search {
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    margin: 40px 20px 20px auto;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  margin: 40px 20px 20px auto;
 }
 .Search form {
-    margin: 20px;
+  margin: 20px;
 }
-
-
+.Search hr {
+  margin: 0 4px 14px;
+  border: 1px solid lightgray;
+}

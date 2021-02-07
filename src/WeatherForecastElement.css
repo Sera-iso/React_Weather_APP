@@ -4,4 +4,5 @@
 }
 .WeatherForecastElement li {
   font-size: 14px;
+  padding-bottom: 6px;
 }

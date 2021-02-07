@@ -1,23 +1,24 @@
 .WeatherOverview h1 {
-  font-weight: bolder;
-  font-style: italic;
-  font-family: monospace;
-  font-size: 40px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 36px;
+}
+.WeatherOverview h2 {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 46px;
 }
 .WeatherOverview ul {
   list-style-type: none;
   padding: 0;
 }
-.WeatherOverview .weather-conditions canvas {
+.WeatherOverview canvas {
   margin-right: 8px;
   position: relative;
-  top: 10px;
+  top: 16px;
 }
 .WeatherOverview .weather-conditions {
-  font-size: 18px;
+  font-size: 20px;
 }
 .WeatherOverview .other-measurements {
-  font-size: 14px;
-  padding-top: 16px;
+  font-size: 16px;
+  padding-top: 20px;
 }
-
