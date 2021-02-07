@@ -4,4 +4,18 @@
   margin: 0 auto;
   width: 90%;
 }
-
+.App .morning {
+  background-image: url("./media/morning.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App .evening {
+  background-image: url("./media/evening.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App .night {
+  background-image: url("./media/night.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
