@@ -7,7 +7,7 @@ import "./WeatherOverview.css";
 export default function WeatherOverview( {data} ) {
      return (
         <div className="WeatherOverview">
-          <h1>{data.city}</h1>
+          <h1>{data.city}, {data.country}</h1>
           <WeatherTemperature celsius={Math.round(data.temp)} />
           <ul>
             <li className="weather-conditions">

@@ -13,6 +13,7 @@ export default function Search( {defaultCity} ) {
     setWeather({
       search: true,
       city: response.data.name,
+      country: response.data.sys.country,
       temp: response.data.main.temp,
       icon: response.data.weather[0].icon,
       description: response.data.weather.description,
