@@ -2,20 +2,8 @@
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+  color: white;
   width: 90%;
+  margin-top: 50px;
 }
-.App .morning {
-  background-image: url("./media/morning.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.App .evening {
-  background-image: url("./media/evening.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.App .night {
-  background-image: url("./media/night.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+

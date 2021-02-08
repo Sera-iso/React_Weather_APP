@@ -12,7 +12,7 @@
 @media (max-width: 767.98px) {
   .WeatherForecastElement {
     flex: none;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid rgb(244, 244, 244, 0.3);
     margin-top: 0;
   }
   .WeatherForecastElement:last-of-type {
