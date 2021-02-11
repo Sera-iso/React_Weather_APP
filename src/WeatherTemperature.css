@@ -1,23 +1,21 @@
+.WeatherTemperature {
+  height: 46px;
+  left: 2px;
+  position: relative;
+}
 .WeatherTemperature h2 {
   display: inline;
-  font-weight: bolder;
   font-size: 38px;
+  font-weight: bolder;
   margin-bottom: 0;
-}
-
-.WeatherTemperature .units {
-  display: inline-block;
-  position: relative;
-  top: -26px;
-  padding-left: 2px;
-  font-size: 12px;
 }
 .WeatherTemperature a {
   text-decoration: none;
 }
-
-.WeatherTemperature {
+.WeatherTemperature .units {
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 2px;
   position: relative;
-  left: 2px;
-  height: 46px;
+  top: -26px;
 }

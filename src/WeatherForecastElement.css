@@ -11,8 +11,8 @@
 }
 @media (max-width: 767.98px) {
   .WeatherForecastElement {
-    flex: none;
     border-bottom: 1px solid rgb(244, 244, 244, 0.3);
+    flex: none;
     margin-top: 0;
   }
   .WeatherForecastElement:last-of-type {
@@ -22,18 +22,18 @@
     display: inline;
   }
   .WeatherForecastElement ul {
+    bottom: -4px;
     margin: 4px 0;
     position: relative;
-    bottom: -4px;
   }
   .WeatherForecastElement .hour {
+    bottom: -6px;
     float: left;
     position: relative;
-    bottom: -6px;
   }
   .WeatherForecastElement .temp {
+    bottom: -6px;
     float: right;
     position: relative;
-    bottom: -6px;
   }
 }
