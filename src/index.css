@@ -4,15 +4,16 @@
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 130%;
+  height: 120%;
 }
 .evening {
   background-image: url("./media/evening.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: absolute;
   width: 100%;
-  height: 130%;
+  height: 120%;
 }
 .night {
   background-image: url("./media/night.png");
@@ -20,5 +21,5 @@
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: 130%;
+  height: 120%;
 }

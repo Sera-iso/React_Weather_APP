@@ -3,11 +3,12 @@
   max-width: 600px;
   margin: 0 auto;
   color: white;
-  width: 90%;
+  width: 100%;
   margin-top: 80px;
 }
 @media (max-width: 767.98px) {
   .App {
-    margin-top: 36px;
+    margin: 0 auto;
+    margin-top: 40px;
   }
 }

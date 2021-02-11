@@ -16,19 +16,14 @@ export default function WeatherForecast( {city} ) {
     if (loaded && city === forecast.city.name) {
     return (
         <div className="WeatherForecast row">
-            <WeatherForecastElement data={forecast.list[0]}/>
-            <WeatherForecastElement data={forecast.list[1]}/>
-            <WeatherForecastElement data={forecast.list[2]}/>
-            <WeatherForecastElement data={forecast.list[3]}/>
-            <WeatherForecastElement data={forecast.list[4]}/>
+          {forecast.list.map(forecast => <WeatherForecastElement data={forecast} key={forecast.dt} />)}
         </div>
       ) 
     } else {
         const apiKey = `c3fdeae7b368bbda2e09bebfb67775c6`;
-        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&cnt=5`;
         axios.get(forecastUrl).then(returnForecastData);
-        
-        console.log(1);
+    console.log(1);
         return null;
     }
 }

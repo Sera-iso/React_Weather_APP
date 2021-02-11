@@ -1,13 +1,18 @@
 .Search {
   border: 1px solid lightgray;
   border-radius: 6px;
-  padding: 0 auto;
   background-color: rgba(250, 250, 250, 0.1);
 }
 .Search form {
-  margin: 20px;
+  padding: 20px 10px;
 }
 .Search hr {
   margin: 0;
   border: 1px solid lightgray;
+}
+@media (max-width: 767.98px) {
+  .Search {
+    border: none;
+    border-radius: 0;
+  }
 }

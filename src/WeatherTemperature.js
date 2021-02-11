@@ -4,17 +4,17 @@ import "./WeatherTemperature.css"
 export default function WeatherTemperature( {celsius} ) {
     const [temperature, setTemperature] = useState("celsius");
 
-    function convertToF(event) {
+    function convertToF(event) { // handleCovertToFClick
     event.preventDefault();
-    setTemperature("fahrenheit");
+    setTemperature("fahrenheit"); // change name to unitF
     }
 
-    function convertToC(event) {
+    function convertToC(event) { // handleCovertToCClick
     event.preventDefault();
-    setTemperature("celsius");
+    setTemperature("celsius"); // change name to unitC
     }
 
-    function fahrenheit() {
+    function fahrenheit() { // covertToF
         return Math.round((celsius * 9/5) + 32);
     }
 

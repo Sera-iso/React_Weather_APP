@@ -11,7 +11,7 @@ export default function WeatherOverview( {data} ) {
           <WeatherTemperature celsius={Math.round(data.temp)} />
           <ul>
             <li className="weather-conditions">
-              <WeatherIcon iconCode={data.icon} />
+              <WeatherIcon iconCode={data.icon} iconAnimated />
               {data.condition}</li>
             <li className="other-measurements">Humidity: {data.humidity}% | Wind: {Math.round(data.wind)}km/h</li>
           </ul>
