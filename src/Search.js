@@ -20,7 +20,8 @@ export default function Search( {defaultCity} ) {
       condition: response.data.weather[0].main,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      date: new Date(response.data.dt * 1000)
+      date: new Date(response.data.dt * 1000),
+      perception: response.data.main.feels_like
     });
   }
   
