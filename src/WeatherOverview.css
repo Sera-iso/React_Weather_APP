@@ -12,14 +12,19 @@
   padding: 0;
 }
 .WeatherOverview canvas {
-  margin-right: 4px;
   position: relative;
   top: 16px;
 }
 .WeatherOverview .weather-conditions {
   font-size: 18px;
+  height: 44px;
+  position: relative;
+  bottom: 12px;
 }
 .WeatherOverview .other-measurements {
   font-size: 16px;
   padding-top: 20px;
+}
+.WeatherOverview .perception {
+  padding-top: 14px;
 }
