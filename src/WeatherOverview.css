@@ -14,6 +14,7 @@
 .WeatherOverview canvas {
   position: relative;
   top: 16px;
+  left: -4px;
 }
 .WeatherOverview .weather-conditions {
   font-size: 18px;
